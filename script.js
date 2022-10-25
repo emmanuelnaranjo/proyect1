@@ -3,7 +3,7 @@
         function quote (content ,author)
         {
             this.content = content;
-            this.content= author;
+            this.author= author;
         }
 
         
@@ -27,7 +27,9 @@
         document.getElementById("button").addEventListener("click", function() {
             
             let quote = document.getElementById("quote");
-            quote.innerHTML =  generator.quote();    
+            let ramdon_quote = generator.quote()
+            quote.innerHTML =  ramdon_quote.content+" <span id =\"author\">"+ramdon_quote.author+"</span>";
+            document.getElementById("author").style.color = "red";
                     
         });
         
